@@ -89,3 +89,16 @@ h2.rv-up.in{background:none}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.js .rv-up,.js .rv-left,.js .rv-right{opacity:1;transform:none}.progress{display:none}.hero h1 em{color:var(--ye);background:none}}
 
 .hero{isolation:isolate}.hero:after{z-index:-1}
+
+/* busy footer */
+footer{padding:0 0 24px;position:relative;overflow:hidden}footer:before{content:"";position:absolute;right:-120px;top:120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(228,228,124,.1),transparent 70%);pointer-events:none}
+.fcta{background:linear-gradient(120deg,var(--ru),#c05a2a);color:#fff;margin-bottom:56px}.fcta-in{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;padding-top:30px;padding-bottom:30px}.fcta strong{display:block;font:700 26px var(--hf);margin-bottom:2px}.fcta span{opacity:.94}.fcta-b{display:flex;gap:12px;flex-wrap:wrap}.fcta .btn{background:#fff;color:var(--ru2);border-color:#fff}.fcta .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.85)}.fcta .btn.ghost:hover{background:#fff;color:var(--ru2)}
+footer .fg{grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}footer .logo{background:none;padding:0;border-radius:0;display:block}footer .logo img{height:auto;width:min(300px,100%)}
+.fcon{margin-top:14px}.fcon li{display:flex;gap:12px;align-items:flex-start;padding:2px 0}.fcon svg{flex:none;margin-top:12px;color:var(--ye)}.fcon a{padding:8px 0;display:inline-block}
+footer li a:hover{color:var(--ye);text-decoration:none;padding-left:4px}footer li a{transition:padding .2s,color .2s}footer li{color:#cfc7b0}.fsm{margin:0}.fmap{display:inline-block;padding:10px 0;color:var(--ye);font-weight:700;text-decoration:none}
+footer h4{position:relative;padding-bottom:10px}footer h4:after{content:"";position:absolute;left:0;bottom:0;width:32px;height:2px;background:var(--ye)}
+.fbadges{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px;padding-top:26px;border-top:1px solid #3a3320}.fbadges span{border:1px solid #4a4128;border-radius:99px;padding:8px 16px;font-size:14.5px;color:#eee6d0;background:rgba(255,255,255,.03)}
+.totop{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid #4a4128;border-radius:99px;text-decoration:none;font-weight:700}.totop:hover{background:var(--ye);color:#241f12;text-decoration:none}
+@media(max-width:1000px){footer .fg{grid-template-columns:1fr 1fr}.fbrand{grid-column:1/-1}}
+@media(max-width:600px){footer .fg{grid-template-columns:1fr 1fr;gap:28px}.fcta strong{font-size:21px}.fcta-b,.fcta-b .btn{width:100%}.fbot{flex-direction:column;align-items:flex-start}}
+@media(max-width:420px){footer .fg{grid-template-columns:1fr}}
