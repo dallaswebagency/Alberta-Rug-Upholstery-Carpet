@@ -119,3 +119,4 @@ html,body{overflow-x:clip;max-width:100%}
 
 @media(min-width:1281px) and (max-width:1520px){.tel{display:none}}
 .hero h1 em{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--ye);animation:none;text-shadow:0 2px 18px rgba(0,0,0,.5)}
+.fbot>span:last-of-type{margin-left:auto;text-align:right}@media(max-width:600px){.fbot>span:last-of-type{margin-left:0;text-align:left}}
