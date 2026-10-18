@@ -102,3 +102,10 @@ footer h4{position:relative;padding-bottom:10px}footer h4:after{content:"";posit
 @media(max-width:1000px){footer .fg{grid-template-columns:1fr 1fr}.fbrand{grid-column:1/-1}}
 @media(max-width:600px){footer .fg{grid-template-columns:1fr 1fr;gap:28px}.fcta strong{font-size:21px}.fcta-b,.fcta-b .btn{width:100%}.fbot{flex-direction:column;align-items:flex-start}}
 @media(max-width:420px){footer .fg{grid-template-columns:1fr}}
+/* mobile polish */
+.cl a{display:inline-block;padding:9px 0;min-height:44px}.topbar a{display:inline-block;padding:10px 4px}.fbot a{min-height:44px;display:inline-flex;align-items:center}
+@media(max-width:760px){.topbar .wrap{padding-top:0;padding-bottom:0}.hero h1{font-size:clamp(34px,10vw,48px)}.hero p{font-size:18px}.head{margin-bottom:30px}.totop{margin-bottom:8px}}
+@media(max-height:480px) and (orientation:landscape){.hero{padding:48px 0}.hero h1{font-size:34px}}
+/* no horizontal overflow from reveal transforms */
+html,body{overflow-x:clip;max-width:100%}
+@media(max-width:1000px){.js .rv-left,.js .rv-right{transform:translateY(30px)}.js .rv-left.in,.js .rv-right.in{transform:none}}
