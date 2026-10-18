@@ -109,3 +109,13 @@ footer h4{position:relative;padding-bottom:10px}footer h4:after{content:"";posit
 /* no horizontal overflow from reveal transforms */
 html,body{overflow-x:clip;max-width:100%}
 @media(max-width:1000px){.js .rv-left,.js .rv-right{transform:translateY(30px)}.js .rv-left.in,.js .rv-right.in{transform:none}}
+
+/* hero v2: full-width team photo, readable text */
+.hero{padding:150px 0 130px;min-height:min(86vh,760px);display:flex;align-items:center}.hero:after{background:url('hero.webp') 65% center/cover no-repeat}
+.hero:before{background:linear-gradient(90deg,rgba(24,20,8,.92) 0%,rgba(24,20,8,.82) 34%,rgba(24,20,8,.45) 62%,rgba(24,20,8,.12) 100%)}
+.hero .wrap{width:100%}.hero h1,.hero p,.hero .pill{text-shadow:0 2px 18px rgba(0,0,0,.45)}.hero p{color:#fbf7ee}.hero .pill{background:rgba(24,20,8,.55);backdrop-filter:blur(4px)}
+@media(max-width:900px){.hero:before{background:linear-gradient(180deg,rgba(24,20,8,.88) 0%,rgba(24,20,8,.78) 55%,rgba(24,20,8,.6) 100%)}.hero:after{background-position:70% center}}
+@media(max-width:760px){.hero{padding:72px 0 64px;min-height:0}}
+
+@media(min-width:1281px) and (max-width:1520px){.tel{display:none}}
+.hero h1 em{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--ye);animation:none;text-shadow:0 2px 18px rgba(0,0,0,.5)}
