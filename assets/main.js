@@ -14,3 +14,22 @@ d.querySelectorAll('form[data-mail]').forEach(function(f){var inp=f.querySelecto
  msg.textContent=files.length?'Opening your email. Please attach your '+files.length+' photo(s) there.':'Opening your email app...';
  location.href='mailto:albertarug@gmail.com?subject='+encodeURIComponent('Quote request')+'&body='+encodeURIComponent(text)})});
 })();
+/* motion */
+(function(){var d=document,rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+var pr=d.querySelector('.progress'),hd=d.querySelector('header.site'),tk=false;
+function onS(){tk=false;var s=window.pageYOffset,m=d.documentElement.scrollHeight-innerHeight;if(pr)pr.style.transform='scaleX('+(m>0?s/m:0)+')';if(hd)hd.classList.toggle('stuck',s>40)}
+window.addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(onS)}},{passive:true});onS();
+if(rm||!('IntersectionObserver' in window)){d.querySelectorAll('.rv-up,.rv-left,.rv-right,.reveal').forEach(function(e){e.classList.add('in')})}
+else{
+ d.querySelectorAll('main h2,main .eyebrow,main .head p,.ag p,.cl li,.form>div,.cta-band .wrap>*,footer .fg>div,.gal figure,.rate').forEach(function(e){if(!e.classList.contains('reveal'))e.classList.add('rv-up')});
+ d.querySelector('.ag .ph')&&d.querySelector('.ag .ph').classList.add('rv-left');
+ d.querySelectorAll('.ag>div:not(.ph)').forEach(function(e){e.classList.add('rv-right')});
+ d.querySelectorAll('.grid3,.tips,.steps,.gal,.facts ul,.cl,.fg').forEach(function(g){Array.prototype.forEach.call(g.children,function(c,i){c.style.setProperty('--d',(i*0.12)+'s')})});
+ d.querySelectorAll('.facts li').forEach(function(e){e.classList.add('rv-up')});
+ var io2=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io2.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+ d.querySelectorAll('.rv-up,.rv-left,.rv-right').forEach(function(e){io2.observe(e)});
+ var eb=d.querySelectorAll('.eyebrow');
+}
+/* count-up for 1965 */
+var f=d.querySelector('.facts li b');if(f&&!rm&&/1965/.test(f.textContent)){var el=f,to=1965,from=1900,t0=null;var o=new IntersectionObserver(function(es){if(es[0].isIntersecting){o.disconnect();requestAnimationFrame(function st(t){if(!t0)t0=t;var p=Math.min((t-t0)/1200,1);el.textContent='Since '+Math.round(from+(to-from)*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(st)})}},{threshold:.6});o.observe(el)}
+})();
